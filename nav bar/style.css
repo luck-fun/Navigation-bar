@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    background: #25292e;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 50px;
+    background: #25292e;
+}
+
+h3 {
+    color:white;
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(63, 103, 177);
+}
+
+.item {
+    list-style: none;
+}
+
+.item a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3 ease;
+}
+
+.list {
+    display: flex;
+}
+
+.contact {
+    background-color: #ffffff;
+    padding: 10px 28px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#burger_button {
+    display: none;
+    position: relative;
+    font-size: 30px;
+    border: none;
+    background: transparent;
+    z-index: 2;
+    right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#burger_button:hover {
+    color: rgb(63, 103, 177);
+}
+
+.item a:hover {
+    color: rgb(63, 103, 177);
+}
+
+.contact:hover {
+    background: rgb(63, 103, 177);
+}
+
+@media (max-width: 1000px) {
+    #burger_button {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        left: -150px;
+        top: 0;
+        width: 150px;
+        background-color: #2c3036;;
+        padding: 90px 15px 15px 15px;
+        height: 100%;
+        transition: transform .5s;
+
+    }
+
+    .list {
+        display: block;
+    }
+
+    .list a {
+        display: block;
+        font-size: 21px;
+    }
+
+    .header.open .menu{
+        transform: translateX(100%);
+    }
+}
